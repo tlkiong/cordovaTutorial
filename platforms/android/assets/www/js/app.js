@@ -4,7 +4,7 @@
     /* ---------------------------------- Local Variables ---------------------------------- */
     var service = new EmployeeService();
 
-    var homeTpl = Handlebars.compile($("#home.tpl").html());
+    var homeTpl = Handlebars.compile($("#home-tpl").html());
     var employeeListTpl = Handlebars.compile($("#employee-list-tpl").html());
 
     service.initialize().done(function () {
