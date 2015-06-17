@@ -3,6 +3,10 @@
 
     /* ---------------------------------- Local Variables ---------------------------------- */
     var service = new EmployeeService();
+
+    var homeTpl = Handlebars.compile($("#home.tpl").html());
+    var employeeListTpl = Handlebars.compile($("#employee-list-tpl").html());
+
     service.initialize().done(function () {
         // console.log("Service initialized");
         renderHomeView();
@@ -42,11 +46,7 @@
     }
 
     function renderHomeView() {
-        var html =
-            "<h1>Directory</h1>" +
-            "<input class='search-key' type='search' placeholder='Enter name'/>" +
-            "<ul class='employee-list'></ul>";
-        $('body').html(html);
+        $('body').html(homeTpl());
         $('.search-key').on('keyup', findByName);
     }
 }());
