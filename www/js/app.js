@@ -10,7 +10,7 @@
 
     service.initialize().done(function() {
         // console.log("Service initialized");
-        renderHomeView();
+        $('body').html(new HomeView(service).render().$el);
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
