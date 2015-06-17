@@ -4,7 +4,8 @@
     /* ---------------------------------- Local Variables ---------------------------------- */
     var service = new EmployeeService();
     service.initialize().done(function () {
-        console.log("Service initialized");
+        // console.log("Service initialized");
+        renderHomeView();
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
